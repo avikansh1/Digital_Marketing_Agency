@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import { Breadcrumbs } from '@/components/site/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | GrowthGrid Digital',
+  title: { absolute: 'Privacy Policy | GrowthGrid Digital' },
   description:
     'Read the GrowthGrid Digital privacy policy. Learn what information we collect, how we use it, and how to contact us with questions.',
   alternates: {
-    canonical: 'https://digital-marketing-agency-pi.vercel.app/privacy-policy',
+    canonical: 'https://growthgriddigital.vercel.app/privacy-policy',
   },
 };
 

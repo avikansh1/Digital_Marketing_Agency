@@ -33,7 +33,7 @@ import { FAQ } from '@/components/site/faq';
 import { SectionHeading } from '@/components/site/section-heading';
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Agency in Lucknow | GrowthGrid Digital',
+  title: { absolute: 'Digital Marketing Agency in Lucknow | GrowthGrid Digital' },
   description:
     'GrowthGrid Digital is a digital marketing agency in Lucknow helping businesses get found online through SEO, local SEO, Google Ads, content marketing, and analytics. Get a free SEO audit today.',
   alternates: { canonical: '/' },

@@ -22,7 +22,7 @@ export function generateMetadata({
   if (!caseStudy) return {};
 
   return {
-    title: caseStudy.metaTitle,
+    title: { absolute: caseStudy.metaTitle },
     description: caseStudy.metaDescription,
     alternates: { canonical: `${siteConfig.url}/case-studies/${caseStudy.slug}` },
     openGraph: {

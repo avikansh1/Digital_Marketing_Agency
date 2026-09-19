@@ -4,11 +4,11 @@ import { ArrowRight } from 'lucide-react';
 import { Breadcrumbs } from '@/components/site/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Sitemap | GrowthGrid Digital',
+  title: { absolute: 'Sitemap | GrowthGrid Digital' },
   description:
     'A complete list of pages on the GrowthGrid Digital website. Find what you need quickly with our HTML sitemap.',
   alternates: {
-    canonical: 'https://digital-marketing-agency-pi.vercel.app/sitemap',
+    canonical: 'https://growthgriddigital.vercel.app/sitemap',
   },
 };
 

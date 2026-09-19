@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { MapPin, Mail, Twitter, Linkedin, Instagram, Facebook } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { siteConfig } from '@/lib/site-config';
 import { services } from '@/lib/services';
 
@@ -15,13 +15,6 @@ const legalLinks = [
   { href: '/privacy-policy', label: 'Privacy Policy' },
   { href: '/terms-and-conditions', label: 'Terms & Conditions' },
   { href: '/sitemap.xml', label: 'Sitemap' },
-];
-
-const socialIcons = [
-  { href: siteConfig.social.twitter, icon: Twitter, label: 'Twitter' },
-  { href: siteConfig.social.linkedin, icon: Linkedin, label: 'LinkedIn' },
-  { href: siteConfig.social.instagram, icon: Instagram, label: 'Instagram' },
-  { href: siteConfig.social.facebook, icon: Facebook, label: 'Facebook' },
 ];
 
 export function Footer() {
@@ -41,20 +34,6 @@ export function Footer() {
               {siteConfig.tagline} A digital marketing agency in Lucknow helping businesses get
               found, get leads, and grow.
             </p>
-            <div className="flex gap-3">
-              {socialIcons.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.label}
-                  className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary-foreground/10 text-primary-foreground/70 transition-colors hover:bg-accent hover:text-accent-foreground"
-                >
-                  <social.icon className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Services */}
@@ -116,21 +95,13 @@ export function Footer() {
               Get in Touch
             </h2>
             <ul className="space-y-3">
-              <li className="flex items-start gap-2 text-sm text-primary-foreground/70">
-                <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent" />
-                <span>
-                  {siteConfig.address.street}, {siteConfig.address.city},{' '}
-                  {siteConfig.address.state} {siteConfig.address.pincode},{' '}
-                  {siteConfig.address.country}
-                </span>
-              </li>
               <li className="flex items-center gap-2 text-sm text-primary-foreground/70">
-                <Mail className="h-4 w-4 flex-shrink-0 text-accent" />
+                <Phone className="h-4 w-4 flex-shrink-0 text-accent" />
                 <a
-                  href={`mailto:${siteConfig.email}`}
+                  href={`tel:${siteConfig.phoneTel}`}
                   className="transition-colors hover:text-accent"
                 >
-                  {siteConfig.email}
+                  {siteConfig.phoneDisplay}
                 </a>
               </li>
             </ul>

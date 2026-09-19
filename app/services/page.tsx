@@ -7,7 +7,7 @@ import { SectionHeading } from '@/components/site/section-heading';
 import { siteConfig } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Services in Lucknow | GrowthGrid Digital',
+  title: { absolute: 'Digital Marketing Services in Lucknow | GrowthGrid Digital' },
   description:
     'Explore our digital marketing services: SEO, local SEO, Google Ads, social media marketing, content marketing, web analytics, and conversion rate optimization.',
   alternates: { canonical: `${siteConfig.url}/services` },

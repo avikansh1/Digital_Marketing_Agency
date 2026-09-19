@@ -12,17 +12,21 @@ export const metadata: Metadata = {
 };
 
 const contactMethods = [
-  {
-    icon: Mail,
-    label: 'Email',
-    value: siteConfig.email,
-    href: `mailto:${siteConfig.email}`,
-  },
+  ...(siteConfig.email
+    ? [
+        {
+          icon: Mail,
+          label: 'Email',
+          value: siteConfig.email,
+          href: `mailto:${siteConfig.email}`,
+        },
+      ]
+    : []),
   {
     icon: Phone,
     label: 'Phone',
     value: siteConfig.phoneDisplay,
-    href: `tel:${siteConfig.phoneHref}`,
+    href: `tel:${siteConfig.phoneTel}`,
   },
   {
     icon: MessageCircle,
@@ -70,18 +74,17 @@ export default function ContactPage() {
                     </span>
                   </a>
                 ))}
-                <div className="flex gap-4 rounded-xl border border-border bg-card p-4">
-                  <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
-                    <MapPin className="h-5 w-5" />
-                  </span>
-                  <span>
-                    <span className="block text-sm text-muted-foreground">Location</span>
-                    <span className="font-medium">
-                      {siteConfig.address.street}, {siteConfig.address.city},{' '}
-                      {siteConfig.address.state} {siteConfig.address.pincode}
+                {siteConfig.address ? (
+                  <div className="flex gap-4 rounded-xl border border-border bg-card p-4">
+                    <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                      <MapPin className="h-5 w-5" />
                     </span>
-                  </span>
-                </div>
+                    <span>
+                      <span className="block text-sm text-muted-foreground">Location</span>
+                      <span className="font-medium">{siteConfig.address}</span>
+                    </span>
+                  </div>
+                ) : null}
               </div>
             </div>
 

@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import { Breadcrumbs } from '@/components/site/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Terms & Conditions | GrowthGrid Digital',
+  title: { absolute: 'Terms & Conditions | GrowthGrid Digital' },
   description:
     'Read the terms and conditions for using the GrowthGrid Digital website and engaging our digital marketing services.',
   alternates: {
-    canonical: 'https://digital-marketing-agency-pi.vercel.app/terms-and-conditions',
+    canonical: 'https://growthgriddigital.vercel.app/terms-and-conditions',
   },
 };
 

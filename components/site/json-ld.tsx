@@ -8,19 +8,6 @@ export function JsonLd() {
     url: siteConfig.url,
     description: siteConfig.description,
     foundingDate: String(siteConfig.foundedYear),
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: siteConfig.address.city,
-      addressRegion: siteConfig.address.state,
-      addressCountry: siteConfig.address.country,
-      postalCode: siteConfig.address.pincode,
-    },
-    sameAs: [
-      siteConfig.social.twitter,
-      siteConfig.social.linkedin,
-      siteConfig.social.instagram,
-      siteConfig.social.facebook,
-    ],
   };
 
   const localBusinessSchema = {
@@ -29,15 +16,7 @@ export function JsonLd() {
     name: siteConfig.name,
     description: siteConfig.description,
     url: siteConfig.url,
-    telephone: siteConfig.phoneDisplay,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: siteConfig.address.street,
-      addressLocality: siteConfig.address.city,
-      addressRegion: siteConfig.address.state,
-      addressCountry: siteConfig.address.country,
-      postalCode: siteConfig.address.pincode,
-    },
+    telephone: siteConfig.phoneE164,
     areaServed: {
       '@type': 'City',
       name: 'Lucknow',
@@ -79,12 +58,6 @@ export function ServiceJsonLd({
       '@type': 'ProfessionalService',
       name: siteConfig.name,
       url: siteConfig.url,
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: siteConfig.address.city,
-        addressRegion: siteConfig.address.state,
-        addressCountry: siteConfig.address.country,
-      },
     },
     areaServed: {
       '@type': 'City',
