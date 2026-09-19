@@ -19,12 +19,6 @@ const plusJakarta = Plus_Jakarta_Sans({
   display: 'swap',
 });
 
-export const viewport = {
-  themeColor: '#0f172a',
-  width: 'device-width',
-  initialScale: 1,
-};
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
