@@ -26,6 +26,7 @@ export default function ServicesPage() {
         <Breadcrumbs items={[{ name: 'Services', url: '/services' }]} />
         <section className="py-8 lg:py-12">
           <SectionHeading
+            as="h1"
             eyebrow="Our Services"
             title="Digital Marketing Services for Every Stage of Growth"
             description="Whether you need to build visibility, generate leads, or optimize conversions, we have a service designed to help. Explore each one to learn how it works."

@@ -8,10 +8,16 @@ import { CTASection } from '@/components/site/cta-section';
 import { SectionHeading } from '@/components/site/section-heading';
 
 export const metadata: Metadata = {
-  title: 'About GrowthGrid Digital',
+  title: { absolute: 'About GrowthGrid Digital' },
   description:
     'Learn about GrowthGrid Digital, a Lucknow-based digital marketing agency focused on practical SEO, paid search, content, analytics, and conversion work.',
   alternates: { canonical: `${siteConfig.url}/about` },
+  openGraph: {
+    title: 'About GrowthGrid Digital | Lucknow Marketing Agency',
+    description:
+      'Learn about GrowthGrid Digital, a Lucknow-based digital marketing agency focused on practical SEO, paid search, content, analytics, and conversion work.',
+    url: `${siteConfig.url}/about`,
+  },
 };
 
 const principles = [

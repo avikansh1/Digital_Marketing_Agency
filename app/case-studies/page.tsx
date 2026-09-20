@@ -11,6 +11,12 @@ export const metadata: Metadata = {
   description:
     'Demo case studies showing how GrowthGrid Digital approaches local SEO, SEO, Google Ads, content marketing, and analytics projects.',
   alternates: { canonical: `${siteConfig.url}/case-studies` },
+  openGraph: {
+    title: 'Marketing Case Studies & Results | GrowthGrid Digital',
+    description:
+      'Demo case studies showing how GrowthGrid Digital approaches local SEO, SEO, Google Ads, content marketing, and analytics projects.',
+    url: `${siteConfig.url}/case-studies`,
+  },
 };
 
 export default function CaseStudiesPage() {
@@ -20,6 +26,7 @@ export default function CaseStudiesPage() {
         <Breadcrumbs items={[{ name: 'Case Studies', url: '/case-studies' }]} />
         <section className="py-8 lg:py-12">
           <SectionHeading
+            as="h1"
             eyebrow="Case Studies"
             title="Marketing Scenarios, Strategies, and Lessons"
             description="These demo examples show the kind of problems we solve, how we think through strategy, and what we measure along the way."

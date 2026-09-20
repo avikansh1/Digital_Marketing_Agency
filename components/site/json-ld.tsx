@@ -7,6 +7,7 @@ export function JsonLd() {
     name: siteConfig.name,
     url: siteConfig.url,
     description: siteConfig.description,
+    telephone: '+91 7678482100',
     foundingDate: String(siteConfig.foundedYear),
   };
 
@@ -16,7 +17,7 @@ export function JsonLd() {
     name: siteConfig.name,
     description: siteConfig.description,
     url: siteConfig.url,
-    telephone: siteConfig.phoneE164,
+    telephone: '+91 7678482100',
     areaServed: {
       '@type': 'City',
       name: 'Lucknow',
@@ -78,15 +79,19 @@ export function ArticleJsonLd({
   description,
   url,
   publishedAt,
+  modifiedAt,
+  updatedAt,
   author,
-  publisher,
+  publisher = siteConfig.name,
 }: {
   title: string;
   description: string;
   url: string;
   publishedAt: string;
+  modifiedAt?: string;
+  updatedAt?: string;
   author: string;
-  publisher: string;
+  publisher?: string;
 }) {
   const schema = {
     '@context': 'https://schema.org',
@@ -95,7 +100,7 @@ export function ArticleJsonLd({
     description,
     url,
     datePublished: publishedAt,
-    dateModified: publishedAt,
+    dateModified: updatedAt || modifiedAt || publishedAt,
     author: {
       '@type': 'Person',
       name: author,
@@ -127,7 +132,10 @@ export function BreadcrumbJsonLd({
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: item.url,
+      item:
+        item.url.startsWith('http://') || item.url.startsWith('https://')
+          ? item.url
+          : `${siteConfig.url}${item.url.startsWith('/') ? '' : '/'}${item.url}`,
     })),
   };
 

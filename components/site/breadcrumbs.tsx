@@ -9,14 +9,24 @@ export interface BreadcrumbItem {
 }
 
 export function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
-  const allItems: BreadcrumbItem[] = [
+  const toAbsoluteUrl = (url: string) => {
+    if (url.startsWith('http://') || url.startsWith('https://')) {
+      return url;
+    }
+    return `${siteConfig.url}${url.startsWith('/') ? '' : '/'}${url}`;
+  };
+
+  const schemaItems: BreadcrumbItem[] = [
     { name: 'Home', url: siteConfig.url },
-    ...items,
+    ...items.map((item) => ({
+      name: item.name,
+      url: toAbsoluteUrl(item.url),
+    })),
   ];
 
   return (
     <>
-      <BreadcrumbJsonLd items={allItems} />
+      <BreadcrumbJsonLd items={schemaItems} />
       <nav aria-label="Breadcrumb" className="py-4">
         <ol className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground">
           <li>

@@ -3,11 +3,13 @@ export function SectionHeading({
   title,
   description,
   className = '',
+  as: Component = 'h2',
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   className?: string;
+  as?: 'h1' | 'h2';
 }) {
   return (
     <div className={`mx-auto max-w-2xl text-center ${className}`}>
@@ -16,9 +18,9 @@ export function SectionHeading({
           {eyebrow}
         </p>
       )}
-      <h2 className="font-heading text-3xl font-bold text-balance sm:text-4xl">
+      <Component className="font-heading text-3xl font-bold text-balance sm:text-4xl">
         {title}
-      </h2>
+      </Component>
       {description && (
         <p className="mt-4 text-lg text-muted-foreground text-pretty">
           {description}

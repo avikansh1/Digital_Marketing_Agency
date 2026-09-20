@@ -5,10 +5,16 @@ import { Breadcrumbs } from '@/components/site/breadcrumbs';
 import { ContactForm } from '@/components/site/contact-form';
 
 export const metadata: Metadata = {
-  title: 'Contact GrowthGrid Digital',
+  title: { absolute: 'Contact GrowthGrid Digital' },
   description:
     'Contact GrowthGrid Digital for SEO, local SEO, Google Ads, content marketing, analytics, and conversion support.',
   alternates: { canonical: `${siteConfig.url}/contact` },
+  openGraph: {
+    title: 'Contact GrowthGrid Digital | Get in Touch',
+    description:
+      'Contact GrowthGrid Digital for SEO, local SEO, Google Ads, content marketing, analytics, and conversion support.',
+    url: `${siteConfig.url}/contact`,
+  },
 };
 
 const contactMethods = [

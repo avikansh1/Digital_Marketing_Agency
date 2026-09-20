@@ -12,6 +12,12 @@ export const metadata: Metadata = {
   description:
     'Practical digital marketing, SEO, local SEO, Google Ads, and analytics articles for growing businesses.',
   alternates: { canonical: `${siteConfig.url}/blog` },
+  openGraph: {
+    title: 'Digital Marketing Blog | GrowthGrid Digital',
+    description:
+      'Practical digital marketing, SEO, local SEO, Google Ads, and analytics articles for growing businesses.',
+    url: `${siteConfig.url}/blog`,
+  },
 };
 
 export default function BlogPage() {
@@ -21,6 +27,7 @@ export default function BlogPage() {
         <Breadcrumbs items={[{ name: 'Blog', url: '/blog' }]} />
         <section className="py-8 lg:py-12">
           <SectionHeading
+            as="h1"
             eyebrow="Blog"
             title="Digital Marketing Insights and Practical Guides"
             description="Learn the fundamentals of SEO, local search, paid ads, content, and analytics with articles written for business owners."

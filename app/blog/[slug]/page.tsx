@@ -5,6 +5,7 @@ import { ArrowRight, Calendar, Clock, User } from 'lucide-react';
 import { blogPosts, getBlogPost, getRelatedPosts, type BlogPost } from '@/lib/blog-posts';
 import { getService, type Service } from '@/lib/services';
 import { siteConfig } from '@/lib/site-config';
+import { ArticleJsonLd } from '@/components/site/json-ld';
 import { BlogCard } from '@/components/site/blog-card';
 import { Breadcrumbs } from '@/components/site/breadcrumbs';
 import { CTASection } from '@/components/site/cta-section';
@@ -96,6 +97,15 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
+      <ArticleJsonLd
+        title={post.title}
+        description={post.excerpt}
+        url={`${siteConfig.url}/blog/${post.slug}`}
+        publishedAt={post.publishedAt}
+        updatedAt={post.updatedAt || post.publishedAt}
+        author={post.author}
+        publisher={siteConfig.name}
+      />
       <div className="container-page">
         <Breadcrumbs
           items={[

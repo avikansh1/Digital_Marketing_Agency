@@ -8,7 +8,6 @@ const footerLinks = [
   { href: '/case-studies', label: 'Case Studies' },
   { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
-  { href: '/digital-marketing-agency-lucknow', label: 'Digital Marketing Agency Lucknow' },
 ];
 
 const legalLinks = [
