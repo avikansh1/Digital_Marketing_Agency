@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { Menu, X, ChevronRight } from 'lucide-react';
 import { siteConfig } from '@/lib/site-config';
@@ -26,13 +27,15 @@ export function Navbar() {
         className="container-page flex h-16 items-center justify-between"
         aria-label="Main navigation"
       >
-        <Link href="/" className="flex items-center gap-2" onClick={() => setMobileOpen(false)}>
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-sm font-bold text-primary-foreground">
-            GG
-          </span>
-          <span className="font-heading text-lg font-bold tracking-tight">
-            {siteConfig.name}
-          </span>
+        <Link href="/" className="flex items-center" onClick={() => setMobileOpen(false)}>
+          <Image
+            src="/logo.svg"
+            alt={siteConfig.name}
+            width={147}
+            height={32}
+            priority
+            className="h-8 w-auto"
+          />
         </Link>
 
         {/* Desktop nav */}

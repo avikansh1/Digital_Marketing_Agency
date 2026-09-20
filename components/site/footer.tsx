@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone } from 'lucide-react';
 import { siteConfig } from '@/lib/site-config';
 import { services } from '@/lib/services';
@@ -24,10 +25,13 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-sm font-bold text-accent-foreground">
-                GG
-              </span>
-              <span className="font-heading text-lg font-bold">{siteConfig.name}</span>
+              <Image
+                src="/logo-white.svg"
+                alt={siteConfig.name}
+                width={147}
+                height={32}
+                className="h-8 w-auto"
+              />
             </Link>
             <p className="text-sm text-primary-foreground/70 leading-relaxed">
               {siteConfig.tagline} A digital marketing agency in Lucknow helping businesses get

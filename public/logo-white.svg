@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" fill="none">
+  <!-- Icon: rounded square with GG monogram -->
+  <rect width="48" height="48" rx="10" fill="#08a4d4"/>
+  <text x="7" y="34" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="26" font-weight="800" fill="white" letter-spacing="-1">GG</text>
+  <!-- Wordmark — white text for dark backgrounds -->
+  <text x="60" y="22" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" font-weight="800" fill="white" letter-spacing="-0.3">GrowthGrid</text>
+  <text x="61" y="38" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="500" fill="#08a4d4" letter-spacing="2">DIGITAL</text>
+</svg>
